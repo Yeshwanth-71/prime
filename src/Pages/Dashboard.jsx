@@ -30,7 +30,7 @@ function Dashboard() {
       <Container>
         <Row className="mt-4">
           <Col sm={3}>
-          <Link to={'/view'}>
+          <Link to={'/view'} style={{textDecorationLine:"none", color:"black"}}>
             <div className="rounded-card">
               <img src="https://wallpaperaccess.com/full/7790523.jpg" alt="" />
               <h1>Telugu</h1>

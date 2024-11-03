@@ -8,7 +8,8 @@ function Mobile() {
                 <div key={item.id}>
                     <h2>{item.title}</h2>
                     <p>ID: {item.id}</p>  {/* Display the id */}
-                    <p>Price: {item.description}</p>
+                    <p>Description: {item.description}</p>
+                    <img src={item.image} alt=""  style={{height:"500px", width:"500px"}}/>
                 </div>
             ))}
         </div>
