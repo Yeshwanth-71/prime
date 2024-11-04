@@ -1,13 +1,13 @@
 // App.js
 import React from 'react';
-import Telmovies from './Telmovies'
+import Tammovies from './Tammovies'
 import Header from '../Components/Header'
 
 
 const View = () => {
   return (
     <div><Header/>
-      <Telmovies />
+      <Tammovies />
     </div>
   );
 };

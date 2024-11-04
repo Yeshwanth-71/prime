@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Hindi } from '../Data/Hindi';
+import { Tamil } from '../Data/Tamil';
 
 function Mobile() {
     const responsiveMainCarousel = {
@@ -78,7 +78,7 @@ function Mobile() {
                 showDots={false}    
                 arrows={true}       
             >
-                {Hindi.map((item) => (
+                {Tamil.map((item) => (
                     <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center" }}>
                         <img 
                             src={item.image} 

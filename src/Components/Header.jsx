@@ -2,6 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaUserCircle, FaSearch } from 'react-icons/fa';
+import { MdOutlineUnsubscribe } from "react-icons/md";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
@@ -35,23 +36,33 @@ const Header = () => {
           {/* Centered Nav Links */}
           <ul className="navbar-nav me-auto ms-3">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link text-light">
+              <NavLink to="/" className="nav-link text-light"  style={{ marginRight: '20px' }}>
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/movies" className="nav-link text-light">
+              <NavLink to="/movies" className="nav-link text-light" style={{ marginRight: '20px' }}>
                 Movies
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/tv-shows" className="nav-link text-light">
+              <NavLink to="/tv-shows" className="nav-link text-light" style={{ marginRight: '20px' }}>
                 TV Shows
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/live-tv" className="nav-link text-light">
+              <NavLink to="/live-tv" className="nav-link text-light" style={{ marginRight: '20px' }}>
                 Live TV
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/live-tv" className="nav-link text-grey" style={{ marginRight: '20px' }}>
+                  |
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/live-tv" className="nav-link text-light" style={{ marginRight: '20px' }}>
+              <MdOutlineUnsubscribe /> Subscription
               </NavLink>
             </li>
           </ul>

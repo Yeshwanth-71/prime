@@ -45,10 +45,11 @@ function Dashboard() {
           </Col>
           <Col sm={1}></Col>
           <Col sm={3}>
+          <Link to={'/viewtam'} style={{textDecorationLine:"none", color:"black"}}>
             <div className="rounded-card">
               <img src="https://wallpaperaccess.com/full/14798432.jpg" alt="" />
               <h1>Tamil</h1>
-            </div>
+            </div></Link>
           </Col>
         </Row>
       </Container>
