@@ -1,11 +1,11 @@
 // App.js
 import React from 'react';
-import Newmovies from '../Pages/Newmovies'
+import Hinmovies from './Hinmovies'
 
 const View = () => {
   return (
     <div>
-      <Newmovies />
+      <Hinmovies />
     </div>
   );
 };

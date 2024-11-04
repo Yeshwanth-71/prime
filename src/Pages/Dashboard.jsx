@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import Header from '../Components/Header';
-import View from './View';
 import { Link } from 'react-router-dom';
 
 
@@ -30,7 +29,7 @@ function Dashboard() {
       <Container>
         <Row className="mt-4">
           <Col sm={3}>
-          <Link to={'/view'} style={{textDecorationLine:"none", color:"black"}}>
+          <Link to={'/viewtel'} style={{textDecorationLine:"none", color:"black"}}>
             <div className="rounded-card">
               <img src="https://wallpaperaccess.com/full/7790523.jpg" alt="" />
               <h1>Telugu</h1>
@@ -38,10 +37,11 @@ function Dashboard() {
           </Col>
           <Col sm={1}></Col>
           <Col sm={3}>
+          <Link to={'/viewhin'}  style={{textDecorationLine:"none", color:"black"}}>
             <div className="rounded-card">
               <img src="https://images.ottplay.com/images/mirzapur-season-3-1718088141.jpg" alt="" />
               <h1>Hindi</h1>
-            </div>
+            </div></Link>
           </Col>
           <Col sm={1}></Col>
           <Col sm={3}>

@@ -96,4 +96,8 @@ button:hover {
 .rounded-card h1 {
   margin: 10px 0; 
 }
-
+.move{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
