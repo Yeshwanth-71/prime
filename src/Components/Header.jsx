@@ -36,12 +36,12 @@ const Header = () => {
           {/* Centered Nav Links */}
           <ul className="navbar-nav me-auto ms-3">
             <li className="nav-item">
-              <NavLink to="/" className="nav-link text-light"  style={{ marginRight: '20px' }}>
+              <NavLink to="/dashboard" className="nav-link text-light"  style={{ marginRight: '20px' }}>
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/movies" className="nav-link text-light" style={{ marginRight: '20px' }}>
+             <NavLink className="nav-link text-light" style={{ marginRight: '20px' }}>
                 Movies
               </NavLink>
             </li>

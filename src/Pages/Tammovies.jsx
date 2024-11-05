@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Tamil } from '../Data/Tamil';
+import Header from '../Components/Header';
 
 function Mobile() {
     const responsiveMainCarousel = {
@@ -32,6 +33,7 @@ function Mobile() {
 
     return (
         <div className='car'>
+            <Header/>
             {/* Simple Carousel */}
             <Carousel 
                 responsive={responsiveSimpleCarousel} 
@@ -73,7 +75,7 @@ function Mobile() {
             {/* Main Carousel (Existing) */}
             <Carousel 
                 responsive={responsiveMainCarousel} 
-                infinite={false}    
+                infinite={true}    
                 autoPlay={false}    
                 showDots={false}    
                 arrows={true}       
@@ -85,7 +87,7 @@ function Mobile() {
                             alt={item.title} 
                             style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} 
                         />
-                        <p>{item.title}</p>
+                        <p style={{color:"white"}}>{item.title}</p>
                     </div>
                 ))}
             </Carousel>

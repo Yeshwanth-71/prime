@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Hindi } from '../Data/Hindi';
+import { Malayalam } from '../Data/Malayalm';
 import { LatestHindi } from '../Data/Latesthin';
 import Header from '../Components/Header';
 
@@ -76,12 +76,12 @@ function Mobile() {
             {/* Main Carousel (Existing) */}
             <Carousel 
                 responsive={responsiveMainCarousel} 
-                infinite={false}    
+                infinite={true}    
                 autoPlay={false}    
                 showDots={false}    
                 arrows={true}       
             >
-                {Hindi.map((item) => (
+                {Malayalam.map((item) => (
                     <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center" }}>
                         <img 
                             src={item.image} 

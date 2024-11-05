@@ -4,55 +4,144 @@ import Carousel from 'react-bootstrap/Carousel';
 import Header from '../Components/Header';
 import { Link } from 'react-router-dom';
 
-
-
-
 function Dashboard() {
   return (
     <div className="dashboard-container">
-      <Row>
-        <Header />
-      </Row>
-      <Row>
-      <Carousel className='ant'>
-      <Carousel.Item interval={700}>
-       <img src="https://wallpaperaccess.com/full/14643098.jpg" alt="" height={"700px"} width={"100%"} />
-      </Carousel.Item>
-      <Carousel.Item interval={500}>
-        <img src="https://wallpaperaccess.com/full/7420358.jpg" alt=""height={"700px"} width={"100%"} />
-      </Carousel.Item>
-      <Carousel.Item interval={500}>
-      <img src="https://wallpaperaccess.com/full/1853985.jpg" alt=""height={"700px"} width={"100%"}  />
-      </Carousel.Item>
-    </Carousel>
-      </Row>
-      <Container>
+      <Container fluid>
+        <Row>
+          <Col>
+            <Header />
+          </Col>
+        </Row>
+
+        {/* Single-item Carousel */}
+        <Row>
+          <Col>
+            <Carousel className="ant">
+              <Carousel.Item interval={700}>
+                <img
+                  src="https://wallpaperaccess.com/full/14643098.jpg"
+                  alt="First slide"
+                  style={{ width: '100%', height: 'auto', maxHeight: '700px' }}
+                />
+              </Carousel.Item>
+              <Carousel.Item interval={500}>
+                <img
+                  src="https://wallpaperaccess.com/full/7420358.jpg"
+                  alt="Second slide"
+                  style={{ width: '100%', height: 'auto', maxHeight: '700px' }}
+                />
+              </Carousel.Item>
+              <Carousel.Item interval={500}>
+                <img
+                  src="https://wallpaperaccess.com/full/1853985.jpg"
+                  alt="Third slide"
+                  style={{ width: '100%', height: 'auto', maxHeight: '700px' }}
+                />
+              </Carousel.Item>
+            </Carousel>
+          </Col>
+        </Row>
+
+        {/* Multi-item Carousel with images side by side and no autoplay */}
         <Row className="mt-4">
-          <Col sm={3}>
-          <Link to={'/viewtel'} style={{textDecorationLine:"none", color:"black"}}>
-            <div className="rounded-card">
-              <img src="https://wallpaperaccess.com/full/7790523.jpg" alt="" />
-              <h1>Telugu</h1>
-            </div></Link>
-          </Col>
-          <Col sm={1}></Col>
-          <Col sm={3}>
-          <Link to={'/viewhin'}  style={{textDecorationLine:"none", color:"black"}}>
-            <div className="rounded-card">
-              <img src="https://images.ottplay.com/images/mirzapur-season-3-1718088141.jpg" alt="" />
-              <h1>Hindi</h1>
-            </div></Link>
-          </Col>
-          <Col sm={1}></Col>
-          <Col sm={3}>
-          <Link to={'/viewtam'} style={{textDecorationLine:"none", color:"black"}}>
-            <div className="rounded-card">
-              <img src="https://wallpaperaccess.com/full/14798432.jpg" alt="" />
-              <h1>Tamil</h1>
-            </div></Link>
+          <Col>
+            <Carousel className="multi-item-carousel" interval={null}> {/* Disables autoplay */}
+              <Carousel.Item>
+                <Row className="justify-content-center">
+                  <Col md={3} className="px-2 text-center">
+                    <Link to={'/telmovie'} style={{textDecoration:"none"}}><div className="image-container">
+                      <img
+                        src="https://wallpaperaccess.com/full/7790523.jpg"
+                        alt="Item 1"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">Telugu</h1>
+                    </div></Link>
+                  </Col>
+                  <Col md={3} className="px-2 text-center">
+                   <Link to={'/hinmovie'} style={{textDecoration:"none"}}> <div className="image-container">
+                      <img
+                        src="https://images.ottplay.com/images/mirzapur-season-3-1718088141.jpg"
+                        alt="Item 2"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">Hindi</h1>
+                    </div></Link>
+                  </Col>
+                  <Col md={3} className="px-2 text-center">
+                   <Link to={'/tammovie'} style={{textDecoration:"none"}}> <div className="image-container">
+                      <img
+                        src="https://wallpapercave.com/wp/wp8015498.jpg"
+                        alt="Item 3"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">Tamil</h1>
+                    </div></Link>
+                  </Col>
+                  <Col md={3} className="px-2 text-center">
+                   <Link to={'/engmovie'}  style={{textDecoration:"none"}}> <div className="image-container">
+                      <img
+                        src="https://4kwallpapers.com/images/walls/thumbs_3t/11684.jpg"
+                        alt="Item 4"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">English</h1>
+                    </div></Link>
+                  </Col>
+                </Row>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <Row className="justify-content-center">
+                  <Col md={3} className="px-2 text-center">
+                   <Link to={'/malmovie'} style={{textDecoration:"none"}}><div className="image-container">
+                      <img
+                        src="https://wallpaperaccess.com/full/14119726.jpg"
+                        alt="Item 5"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">Malayalam</h1>
+                    </div></Link> 
+                  </Col>
+                  <Col md={3} className="px-2 text-center">
+                    <div className="image-container">
+                      <img
+                        src="https://wallpaperaccess.com/full/8714676.jpg"
+                        alt="Item 6"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">Kannada</h1>
+                    </div>
+                  </Col>
+                  <Col md={3} className="px-2 text-center">
+                    <div className="image-container">
+                      <img
+                        src="https://wallpaperaccess.com/full/12622543.jpg"
+                        alt="Item 7"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white ">K-Drama</h1>
+                    </div>
+                  </Col>
+                  <Col md={3} className="px-2 text-center">
+                    <div className="image-container">
+                      <img
+                        src="https://wallpaperaccess.com/full/677417.jpg"
+                        alt="Item 8"
+                        style={{ width: '100%', height: '200px' }}
+                      />
+                      <h1 className="image-label text-white">Anime</h1>
+                    </div>
+                  </Col>
+                </Row>
+              </Carousel.Item>
+            </Carousel>
           </Col>
         </Row>
       </Container>
+
+     
     </div>
   );
 }

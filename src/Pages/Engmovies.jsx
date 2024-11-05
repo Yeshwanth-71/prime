@@ -1,8 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Hindi } from '../Data/Hindi';
-import { LatestHindi } from '../Data/Latesthin';
+import { English } from '../Data/English';
 import Header from '../Components/Header';
 
 function Mobile() {
@@ -46,7 +45,7 @@ function Mobile() {
                 {/* Adjust height in the style */}
                 <div style={{ textAlign: "center", position: "relative" }}>
                     <img 
-                        src="https://moviezgyan.com/wp-content/uploads/2020/12/2758843-2048x1357.jpg" 
+                        src="https://wallpaperaccess.com/full/1992037.png" 
                         alt="First Slide" 
                         style={{ width: "100%", height: "700px", objectFit: "cover" }} // Increased height
                     />
@@ -55,7 +54,7 @@ function Mobile() {
                 </div>
                 <div style={{ textAlign: "center", position: "relative" }}>
                     <img 
-                        src="https://wallpaperaccess.com/full/9357965.jpg" 
+                        src="https://www.comingsoon.net/wp-content/uploads/sites/3/2022/12/The_Devils_Hour_Key_Art.jpg?resize=2048" 
                         alt="Second Slide" 
                         style={{ width: "100%", height: "700px", objectFit: "cover" }} // Increased height
                     />
@@ -64,7 +63,7 @@ function Mobile() {
                 </div>
                 <div style={{ textAlign: "center", position: "relative" }}>
                     <img 
-                        src="https://wallpaperaccess.com/full/3727238.jpg" 
+                        src="https://wallpaperaccess.com/full/1104242.jpg" 
                         alt="Third Slide" 
                         style={{ width: "100%", height: "700px", objectFit: "cover" }} // Increased height
                     />
@@ -76,31 +75,12 @@ function Mobile() {
             {/* Main Carousel (Existing) */}
             <Carousel 
                 responsive={responsiveMainCarousel} 
-                infinite={false}    
-                autoPlay={false}    
-                showDots={false}    
-                arrows={true}       
-            >
-                {Hindi.map((item) => (
-                    <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center" }}>
-                        <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} 
-                        />
-                        <p style={{color:"white"}}>{item.title}</p>
-                    </div>
-                ))}
-            </Carousel>
-            <h1 style={{color:"white"}}>Popular Movies</h1>
-            <Carousel 
-                responsive={responsiveMainCarousel} 
                 infinite={true}    
                 autoPlay={false}    
                 showDots={false}    
                 arrows={true}       
             >
-                {LatestHindi.map((item) => (
+                {English.map((item) => (
                     <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center" }}>
                         <img 
                             src={item.image} 

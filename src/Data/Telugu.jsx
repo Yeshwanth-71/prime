@@ -64,7 +64,7 @@ export const Telugu = [
       "rating": 7.3
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "Sarkaaru Vaari Paata",
       "image": "https://wallpapercave.com/wp/wp9811982.jpg",
       "genre": "Action/Comedy",
