@@ -105,24 +105,24 @@ function Dashboard() {
                     </div></Link> 
                   </Col>
                   <Col md={3} className="px-2 text-center">
-                    <div className="image-container">
+                   <Link to={'/kanmovie'} style={{textDecoration:"none"}}> <div className="image-container">
                       <img
-                        src="https://wallpaperaccess.com/full/8714676.jpg"
+                        src="https://wallpaperaccess.com/full/3744987.jpg"
                         alt="Item 6"
                         style={{ width: '100%', height: '200px' }}
                       />
                       <h1 className="image-label text-white">Kannada</h1>
-                    </div>
+                    </div></Link>
                   </Col>
                   <Col md={3} className="px-2 text-center">
-                    <div className="image-container">
+                   <Link to={'/kormovie'} style={{textDecoration:"none"}}> <div className="image-container">
                       <img
                         src="https://wallpaperaccess.com/full/12622543.jpg"
                         alt="Item 7"
                         style={{ width: '100%', height: '200px' }}
                       />
                       <h1 className="image-label text-white ">K-Drama</h1>
-                    </div>
+                    </div></Link>
                   </Col>
                   <Col md={3} className="px-2 text-center">
                     <div className="image-container">

@@ -8,7 +8,7 @@ export const LatestHindi = [
         "uploadTime": "January 25, 2023",
         "views": "500,000,000",
         "author": "Yash Raj Films",
-        "videoUrl": "https://www.youtube.com/watch?v=G5I54x3g68A",  
+        "videoUrl": "",  
         "description": "A spy action thriller featuring Shah Rukh Khan."
     },
     {

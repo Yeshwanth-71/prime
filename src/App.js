@@ -8,6 +8,8 @@ import Hinmovies from './Pages/Hinmovies';
 import Tammovies from './Pages/Tammovies';
 import Engmovies from './Pages/Engmovies';
 import Malmovies from './Pages/Malmovies';
+import Kanmovies from './Pages/Kanmovies';
+import Kormovies from './Pages/Kormovies';
 import Viewtel from './Pages/Viewtel';
 import Viewhin from './Pages/Viewhin';
 import Viewtam from './Pages/Viewtam';
@@ -29,6 +31,8 @@ function App() {
            <Route path="/tammovie" element={<Tammovies />} />
            <Route path="/engmovie" element={<Engmovies />} />
            <Route path="/malmovie" element={<Malmovies />} />
+           <Route path="/kanmovie" element={<Kanmovies />} />
+           <Route path="/kormovie" element={<Kormovies />} />
         </Routes>
       </Router>
     </div>
