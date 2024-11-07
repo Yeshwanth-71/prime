@@ -5,6 +5,7 @@ import { Telugu } from '../Data/Telugu';
 import { Latest } from '../Data/Latesttel';
 import Header from '../Components/Header';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 function Mobile() {
     const [selectedVideo, setSelectedVideo] = useState(null);
@@ -70,6 +71,7 @@ function Mobile() {
                 arrows={true}       
             >
                 {Latest.map((item) => (
+                    <Link to={`/telmovie/${item.id}`}>
                     <div 
                         key={item.id} 
                         className='move' 
@@ -81,7 +83,7 @@ function Mobile() {
                     >
                         <img src={item.thumbnailUrl} alt={item.title} style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} />
                         <p style={{ color: "white" }}>{item.title}</p>
-                    </div>
+                    </div></Link>
                 ))}
             </Carousel>
 
