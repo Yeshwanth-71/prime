@@ -99,6 +99,9 @@ button:hover {
 .rounded-card h1 {
   margin: 10px 0; 
 }
+.any{
+  text-align: center;
+}
 .move{
   background-color: rgb(0, 0, 0);
   display: flex;

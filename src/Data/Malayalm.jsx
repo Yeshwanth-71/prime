@@ -40,7 +40,7 @@ export const Malayalam = [
       "rating": 7.5
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Trance",
       "image": "https://wallpapercave.com/wp/wp7551817.jpg",
       "genre": "Thriller/Drama",

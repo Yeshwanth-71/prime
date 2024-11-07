@@ -7,34 +7,22 @@ import { Link } from 'react-router-dom';
 
 function Mobile() {
     const responsiveMainCarousel = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 1024 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 1024, min: 768 },
-            items: 4
-        },
-        tablet: {
-            breakpoint: { max: 768, min: 464 },
-            items: 3
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 2
-        }
+        superLargeDesktop: { breakpoint: { max: 4000, min: 1024 }, items: 5 },
+        desktop: { breakpoint: { max: 1024, min: 768 }, items: 4 },
+        tablet: { breakpoint: { max: 768, min: 464 }, items: 3 },
+        mobile: { breakpoint: { max: 464, min: 0 }, items: 2 }
     };
 
     const responsiveSimpleCarousel = {
-        all: {
-            breakpoint: { max: 4000, min: 0 },
-            items: 1  // Display one item at a time
-        }
+        superLargeDesktop: { breakpoint: { max: 4000, min: 1024 }, items: 1 },
+        desktop: { breakpoint: { max: 1024, min: 768 }, items: 1 },
+        tablet: { breakpoint: { max: 768, min: 464 }, items: 1 },
+        mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
     };
 
     return (
         <div className='car'>
-            <Header/>
+            <Header />
             {/* Simple Carousel */}
             <Carousel 
                 responsive={responsiveSimpleCarousel} 
@@ -43,54 +31,45 @@ function Mobile() {
                 showDots={true} 
                 arrows={true}
             >
-                {/* Adjust height in the style */}
-                <div style={{ textAlign: "center", position: "relative" }}>
-                    <img 
-                        src="https://wallpaperaccess.com/full/1992037.png" 
-                        alt="First Slide" 
-                        style={{ width: "100%", height: "700px", objectFit: "cover" }} // Increased height
-                    />
-                    <div style={{ position: "absolute", bottom: "20px", left: "20px", color: "#fff" }}>
+                {[
+                    "https://wallpaperaccess.com/full/1992037.png",
+                    "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/12/The_Devils_Hour_Key_Art.jpg?resize=2048",
+                    "https://wallpaperaccess.com/full/1104242.jpg",
+                ].map((src, index) => (
+                    <div key={index} style={{ textAlign: "center", position: "relative" }}>
+                        <img 
+                            src={src} 
+                            alt={`Slide ${index + 1}`} 
+                            style={{ width: "100%", height: "50vh", objectFit: "cover" }} 
+                        />
                     </div>
-                </div>
-                <div style={{ textAlign: "center", position: "relative" }}>
-                    <img 
-                        src="https://www.comingsoon.net/wp-content/uploads/sites/3/2022/12/The_Devils_Hour_Key_Art.jpg?resize=2048" 
-                        alt="Second Slide" 
-                        style={{ width: "100%", height: "700px", objectFit: "cover" }} // Increased height
-                    />
-                    <div style={{ position: "absolute", bottom: "20px", left: "20px", color: "#fff" }}>
-                    </div>
-                </div>
-                <div style={{ textAlign: "center", position: "relative" }}>
-                    <img 
-                        src="https://wallpaperaccess.com/full/1104242.jpg" 
-                        alt="Third Slide" 
-                        style={{ width: "100%", height: "700px", objectFit: "cover" }} // Increased height
-                    />
-                    <div style={{ position: "absolute", bottom: "20px", left: "20px", color: "#fff" }}>
-                    </div>
-                </div>
+                ))}
             </Carousel>
-                <h1 style={{color:"white"}}>Movies</h1>
-            {/* Main Carousel (Existing) */}
+
+            {/* Movies Section */}
+            <h1 style={{ color: "white", fontSize: "1.5em", textAlign: "center" }}>Movies</h1>
             <Carousel 
                 responsive={responsiveMainCarousel} 
                 infinite={true}    
                 autoPlay={false}    
                 showDots={false}    
-                arrows={true}       
+                arrows={window.innerWidth > 768} // Conditionally hide arrows on mobile
             >
                 {English.map((item) => (
-                    <Link to={`/engmovie/${item.id}`} style={{textDecoration:"none"}}>
-                    <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center" }}>
-                        <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} 
-                        />
-                        <p style={{color:"white"}}>{item.title}</p>
-                    </div></Link>
+                    <Link 
+                        key={item.id} 
+                        to={`/engmovie/${item.id}`} 
+                        style={{ textDecoration: "none", display: "block" }}
+                    >
+                        <div className='move' style={{ padding: "10px", textAlign: "center" }}>
+                            <img 
+                                src={item.image} 
+                                alt={item.title} 
+                                style={{ height: "150px", width: "150px", objectFit: "cover", borderRadius: "8px" }} 
+                            />
+                            <p style={{ color: "white" }}>{item.title}</p>
+                        </div>
+                    </Link>
                 ))}
             </Carousel>
         </div>

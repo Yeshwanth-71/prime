@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { FaUserCircle, FaSearch } from 'react-icons/fa';
 import { MdOutlineUnsubscribe } from "react-icons/md";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 const Header = () => {
   return (

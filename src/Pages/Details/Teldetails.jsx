@@ -20,7 +20,7 @@ function MobDet() {
             <img src={item.image} alt=""  height={"400px"} />
             <h3>Title:{item.title}</h3>
             <h3>Year:{item.releaseYear}</h3>
-
+            <button className="btn btn-primary">Watch Now</button>
           </div>
         </div>
     </Col>
