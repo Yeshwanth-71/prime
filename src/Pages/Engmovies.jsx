@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { English } from '../Data/English';
 import Header from '../Components/Header';
+import { Link } from 'react-router-dom';
 
 function Mobile() {
     const responsiveMainCarousel = {
@@ -81,6 +82,7 @@ function Mobile() {
                 arrows={true}       
             >
                 {English.map((item) => (
+                    <Link to={`/engmovie/${item.id}`} style={{textDecoration:"none"}}>
                     <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center" }}>
                         <img 
                             src={item.image} 
@@ -88,7 +90,7 @@ function Mobile() {
                             style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} 
                         />
                         <p style={{color:"white"}}>{item.title}</p>
-                    </div>
+                    </div></Link>
                 ))}
             </Carousel>
         </div>

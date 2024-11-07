@@ -1,13 +1,13 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { Telugu } from '../../Data/Telugu'
+import { English } from '../../Data/English'
 import { Col, Row } from 'react-bootstrap'
 import Header from '../../Components/Header'
 
 
 function MobDet() {
     const {id} = useParams();
-    const item = Telugu.find((e)=> e.id === Number(id))
+    const item = English.find((e)=> e.id === Number(id))
     
     console.log(id)
     

@@ -5,6 +5,7 @@ import { Hindi } from '../Data/Hindi';
 import { LatestHindi } from '../Data/Latesthin';
 import Header from '../Components/Header';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 function Mobile() {
     const [selectedVideo, setSelectedVideo] = useState(null);
@@ -54,10 +55,11 @@ function Mobile() {
                 arrows={true}       
             >
                 {Hindi.map((item) => (
+                     <Link to={`/hinmovie/${item.id}`} style={{textDecoration:"none"}}>
                     <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center", gap: "15px" }}>
                         <img src={item.image} alt={item.title} style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} />
                         <p style={{ color: "white" }}>{item.title}</p>
-                    </div>
+                    </div></Link>
                 ))}
             </Carousel>
 

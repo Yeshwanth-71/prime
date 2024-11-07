@@ -55,10 +55,11 @@ function Mobile() {
                 arrows={true}       
             >
                 {Telugu.map((item) => (
+                     <Link to={`/telmovie/${item.id}`}  style={{textDecoration:"none"}}>
                     <div key={item.id} className='move' style={{ padding: "10px", textAlign: "center", gap: "15px" }}>
                         <img src={item.image} alt={item.title} style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} />
                         <p style={{ color: "white" }}>{item.title}</p>
-                    </div>
+                    </div></Link>
                 ))}
             </Carousel>
 
@@ -71,7 +72,7 @@ function Mobile() {
                 arrows={true}       
             >
                 {Latest.map((item) => (
-                    <Link to={`/telmovie/${item.id}`}>
+                   
                     <div 
                         key={item.id} 
                         className='move' 
@@ -83,7 +84,7 @@ function Mobile() {
                     >
                         <img src={item.thumbnailUrl} alt={item.title} style={{ height: "200px", width: "200px", objectFit: "cover", borderRadius: "8px" }} />
                         <p style={{ color: "white" }}>{item.title}</p>
-                    </div></Link>
+                    </div>
                 ))}
             </Carousel>
 

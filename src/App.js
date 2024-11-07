@@ -12,6 +12,10 @@ import Kanmovies from './Pages/Kanmovies';
 import Kormovies from './Pages/Kormovies';
 import Animovies from './Pages/Animovies';
 import Teldetails from './Pages/Details/Teldetails'; 
+import Hindetails from './Pages/Details/Hindetails';
+import Tamdetails from './Pages/Details/Tamdetails';
+import Engdetails from'./Pages/Details/Engdetails';
+import Maldetails from './Pages/Details/Maldetails';
 import Viewtel from './Pages/Viewtel';
 import Viewhin from './Pages/Viewhin';
 import Viewtam from './Pages/Viewtam';
@@ -37,6 +41,10 @@ function App() {
            <Route path="/kormovie" element={<Kormovies />} />
            <Route path="/animovie" element={<Animovies />} />
            <Route path="/telmovie/:id" element={<Teldetails />} />
+           <Route path="/hinmovie/:id" element={<Hindetails />} />
+           <Route path="/tammovie/:id" element={<Tamdetails />} />
+           <Route path="/engmovie/:id" element={<Engdetails />} />
+           <Route path="/malmovie/:id" element={<Maldetails />} />
         </Routes>
       </Router>
     </div>
