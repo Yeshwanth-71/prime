@@ -29,7 +29,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-           <Route path="/luffy" element={<Login />} />
+           <Route path="/" element={<Login />} />
            <Route path="/dashboard" element={<Dashboard />} />
            <Route path="/viewtel" element={<Viewtel />} />
            <Route path="/viewhin" element={<Viewhin />} />
